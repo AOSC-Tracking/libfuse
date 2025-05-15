@@ -71,6 +71,8 @@ AC_ARG_WITH([libiconv-prefix],
       if test -d $dir/lib; then LDFLAGS="$LDFLAGS -L$dir/lib"; fi
     done
    ])
+AM_GNU_GETTEXT([external])
+AM_GNU_GETTEXT_VERSION(0.25)
 AM_ICONV
 libfuse_libs="$libfuse_libs $LTLIBICONV"
 AM_CONDITIONAL(ICONV, test "$am_cv_func_iconv" = yes)
